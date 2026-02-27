@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PingPong</title>
+  <!-- fevicon -->
+    <link rel="icon" type="image/x-icon" href="upload.svg" filter: invert(1);>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <!-- <div class="chat-header">
+      
+    </div> -->
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+  <div class="in">
+    <img src="upload.svg" alt="upload file" />
+    <input type="file" id="zipInput" accept=".zip" hidden>
+    <label for="zipInput">Upload Zip</label>
+    <span id="fileName" class="file-name"></span>
+  </div>
+
+  <button id="goBtn">Load Chat</button>
+</div>
+<div id="loadingOverlay" class="loading-overlay displayNone">
+  <div class="loader">Loading Chat...</div>
+</div>
+
+
+    <!-- Chat Display Area -->
+    <div class="chat-wrapper displayNone">
+    <div class="chat-header">
+  <div class="user-left" id="leftUser"></div>
+  <div class="user-right" id="rightUser"></div>
+</div>
+
+
+      <div id="chatContainer" class="chat-container"></div>
+
+      <button id="scrollToBottomBtn" class="scroll-btn">
+  down
+</button>
+
+    </div>
+
+    
+  </div>
+
+  <!-- JSZip CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
